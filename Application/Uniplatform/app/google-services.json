@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "336636525029",
+    "firebase_url": "https://uniplatform-9f3a3.firebaseio.com",
+    "project_id": "uniplatform-9f3a3",
+    "storage_bucket": "uniplatform-9f3a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336636525029:android:790166c8420af1d5ea570c",
+        "android_client_info": {
+          "package_name": "com.spid3rrr.uniplatform"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336636525029-fsvd2kpvqmoshqinvjbd4nldfdf6s3va.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.spid3rrr.uniplatform",
+            "certificate_hash": "57f42c3e7fd3ecd05e4087c31ae8a3a02a3ab7fd"
+          }
+        },
+        {
+          "client_id": "336636525029-33lhlv9t1b4hj90pjotvrfsff5ivreos.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdf3y6pEWLxbMEFB2iJCOGIEkOFpL2o0A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336636525029-33lhlv9t1b4hj90pjotvrfsff5ivreos.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
