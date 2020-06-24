@@ -199,6 +199,26 @@
 						&copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
 					</div>
 				</div>
+
+				id :   <input type="text" id="id">
+				name : <input type="text" id="name">
+				age :  <input type="text" id="age">
+				moyen :<input type="text" id="moyen">
+
+				<button onclick= "add()" >Add</button>
+				<button onclick= "cls()" >clear</button>
+				<br><br><br><br>
+				<hr width="100%">
+				<center>  id :   <input type="text" id="Lid">
+				<button onclick= "load()" >Load</button>  </center>
+				<br>
+				name : <input type="text" id="Lname">
+				age :  <input type="text" id="Lage">
+				moyen :<input type="text" id="Lmoyen">
+				<hr width="100%" >
+
+
+
 			</footer>
 
 		<!-- Scripts -->
@@ -209,7 +229,36 @@
 			<script src="assets/js/database.js"></script>
 			<script src="assets/js/main.js"></script>
 
-<!-- aaa -->
+
+ 	<!-- the new new -->
+	
+	<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
+
+	
+	<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-analytics.js"></script>
+
+	<script>
+  	// Your web app's Firebase configuration
+  	var firebaseConfig = {
+    apiKey: "AIzaSyCKJSfpdqaLaQ5b_w3QXNfRfp49yNwpD3s",
+    authDomain: "uniplatform-9f3a3.firebaseapp.com",
+    databaseURL: "https://uniplatform-9f3a3.firebaseio.com",
+    projectId: "uniplatform-9f3a3",
+    storageBucket: "uniplatform-9f3a3.appspot.com",
+    messagingSenderId: "336636525029",
+    appId: "1:336636525029:web:762233591368e432ea570c",
+    measurementId: "G-KQ811SVMH7"
+ 	 };
+ 	 // Initialize Firebase
+  	firebase.initializeApp(firebaseConfig);
+  	firebase.analytics();
+	</script>
+
+	<script src="main.js"></script>
+
+
+
 
 	</body>
 </html>
