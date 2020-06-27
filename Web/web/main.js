@@ -7,11 +7,25 @@ var firebaseRef = firebase.database().ref();
 	myfile.addEventListener('change', function(e){
 		var file = e.target.files[0]; 
 		var storageRef = firebase.storage().ref('folder/'+file.name);
-
 		storageRef.put(file);
 
 	});
+	
 
+function download() {
+	var storageRef = firebase.storage().ref("folder/files.jpg");
+storageRef.getDownloadURL().then(function(url) {
+  console.log(url);
+  alert(url);
+  var xhr = new XMLHttpRequest();
+  xhr.responseType = 'blob';
+  xhr.onload = function(event) {
+    var blob = xhr.response;
+  };
+  xhr.open('GET', url);
+  xhr.send();
+});
+}	
 function add(){
 
 
