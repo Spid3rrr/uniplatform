@@ -1,14 +1,16 @@
 
 var firebaseRef = firebase.database().ref();
-var storageRef =firebase.storage().ref();
 
-function upload(){
-	
-	
-    storageRef.child(document.getElementById('myfile').name).put(document.getElementById('myfile')) ;
-// ey fhemtek thats what im trying to see xD
 
-}
+	var myfile = document.getElementById("myfile");
+	
+	myfile.addEventListener('change', function(e){
+		var file = e.target.files[0]; 
+		var storageRef = firebase.storage().ref('folder/'+file.name);
+
+		storageRef.put(file);
+
+	});
 
 function add(){
 
