@@ -12,19 +12,31 @@ var firebaseRef = firebase.database().ref();
 	});
 	
 
-function download() {
-	var storageRef = firebase.storage().ref("folder/files.jpg");
+function retrieve() {
+var storageRef = firebase.storage().ref("folder/files.jpg");
 storageRef.getDownloadURL().then(function(url) {
-  console.log(url);
-  alert(url);
-  var xhr = new XMLHttpRequest();
-  xhr.responseType = 'blob';
-  xhr.onload = function(event) {
-    var blob = xhr.response;
-  };
-  xhr.open('GET', url);
-  xhr.send();
+console.log(url);
+var downloadFile = function(url){
+	let a = document.createElement('a');
+	a.href =  url;
+	a.download = "yikes.jpg";
+	document.body.appendChild(a);
+	a.click();
+	document.body.removeChild(a);
+  }
+ downloadFile(url); 
+  /*var link = document.createElement("a");
+  link.download = "yikes.jpg";
+  link.href = url;
+  document.body.appendChild(link);
+ // link.click();
+  document.body.removeChild(link);
+  delete link; 
+  window.saveAs(url, "yikes.jpg")
+*/
+  
 });
+
 }	
 function add(){
 
@@ -88,4 +100,6 @@ function gotData(data){
 		alert("does not exist in the data base");
 	}
 }
+
+
 
