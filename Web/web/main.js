@@ -100,6 +100,16 @@ function gotData(data){
 		alert("does not exist in the data base");
 	}
 }
+function changeclass1ere() {
+	console.log("1ere");
+	document.getElementById("yikes").textContent="1ere";
+  }
+function changeclass2eme() {
+	console.log("2eme");
+	document.getElementById("yikes").textContent="2eme";
+  }
 
+  
+  
 
 
