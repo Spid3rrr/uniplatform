@@ -42,27 +42,31 @@ function add(){
 
 
 	
-	if(document.getElementById('id').value == ""){
-		alert("id is empty");
+	if(document.getElementById('numins').value == ""){
+		alert("numins is empty");
 	}else if(document.getElementById('name').value == ""){
 		alert("name is empty");
 	}
-	else if(document.getElementById('age').value == ""){
-		alert("age is empty");
+	else if(document.getElementById('email').value == ""){
+		alert("email is empty");
 	}
-	else if(document.getElementById('moyen').value == ""){
-		alert("moyen is empty");
-	}
+
+
 
 
 
 	
 	else{
+		res="";
+		if(document.getElementById("class").textContent=="1ere") {res+="1p";}
+		else {res+="2p";}
+		if(document.getElementById("group").textContent=="1ere") {res+="1";}
+		else {res+="2";}
 
-		firebaseRef.child(document.getElementById('id').value).set({
-		name : document.getElementById("name").value,
-		age : document.getElementById("age").value,
-		moyen : document.getElementById("moyen").value
+		firebaseRef.child("Etudiant/"+document.getElementById('name').value).set({
+		Numins : document.getElementById("numins").value,
+		Email : document.getElementById("email").value,
+		Classe : res
 		})
 	cls();
 	alert("Added...");
@@ -71,10 +75,10 @@ function add(){
 
 
 function cls(){
-	document.getElementById('id').value="";
 	document.getElementById('name').value="";
-	document.getElementById('age').value="";
-	document.getElementById('moyen').value="";
+	document.getElementById('numins').value="";
+	document.getElementById('email').value="";
+	document.getElementById('class').value="";
 }
 
 function load(){
@@ -102,11 +106,11 @@ function gotData(data){
 }
 function changeclass1ere() {
 	console.log("1ere");
-	document.getElementById("yikes").textContent="1ere";
+	document.getElementById("class").textContent="1ere";
   }
 function changeclass2eme() {
 	console.log("2eme");
-	document.getElementById("yikes").textContent="2eme";
+	document.getElementById("group").textContent="2eme";
   }
 
   
